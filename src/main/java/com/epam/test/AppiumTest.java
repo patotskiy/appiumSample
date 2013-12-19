@@ -41,7 +41,7 @@ public class AppiumTest {
     @Test(description = "Positive Test", priority = 1)
     public void simpleTestPositive() throws Exception {
         driver.get("http://tut.by");
-        WebElement search = driver.findElement(By.xpath("//input[@placeholder='Поиск']"));
+        WebElement search = driver.findElement(By.xpath("//input[@name='str']"));
         search.sendKeys("EPAM");
         WebElement searchBtn = driver.findElement(By.xpath("//button[@name='search']"));
         searchBtn.click();
@@ -51,7 +51,7 @@ public class AppiumTest {
     @Test(description = "Negativetest",  priority = 2)
     public void simpleTestNegative() throws Exception {
         driver.get("http://tut.by");
-        WebElement search = driver.findElement(By.xpath("//input[@placeholder='Поиск']"));
+        WebElement search = driver.findElement(By.xpath("//input[@name='str']"));
         search.sendKeys("EPAM");
         WebElement searchBtn = driver.findElement(By.xpath("//button[@name='search']"));
         searchBtn.click();
