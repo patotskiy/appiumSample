@@ -1,4 +1,4 @@
-appiumSample
+Appium Sample. Chrome and Safari
 ============
 
 Requirements:
