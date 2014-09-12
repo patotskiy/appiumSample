@@ -27,12 +27,10 @@ public class AppiumTest {
     @BeforeMethod
     public void setUp() throws Exception {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        //For Android
-        capabilities.setCapability("device", "Android");
-        capabilities.setCapability("app", "chrome");
-        //For iOs
-//        capabilities.setCapability("device", "iPhone Simulator");
-//        capabilities.setCapability("app", "safari");
+        capabilities.setCapability("browserName", "Chrome");
+        capabilities.setCapability("automationName", "Appium");
+        capabilities.setCapability("platformName", "Android");
+        capabilities.setCapability("deviceName","Android");
         driver = new RemoteWebDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
     }
